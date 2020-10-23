@@ -22,6 +22,36 @@ class Girl{
 // const xiaHua=new Girl();
 // console.log(xiaHua.sayLove());
 console.log(Girl.sayLove());
-// 抽象类和只读属性的使用
 
+// 只读属性的使用
+class dogAAAA{
+  public readonly _name:string
+  constructor(name:string){
+    this._name=name;
+  };
+}
+const mydog=new dogAAAA("小黑");
+// mydog._name="小红";
+console.log(mydog._name);
+
+// 抽象类：继承的子类里面必须有skill方法，且业务逻辑是不同的。
+abstract class Leader{
+  abstract skill()
+}
+class waiter1 extends Leader{
+  skill(){
+    console.log("我是waiter1");
+  }
+}
+class waiter2 extends Leader{
+  skill(){
+    console.log("我是waiter2");
+  }
+
+}
+class waiter3 extends Leader{
+  skill(){
+    console.log("我是waiter3");
+  }
+}
 
